@@ -64,13 +64,10 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'elderco',
-        'USER': 'root',
-        'PASSWORD': 'password123',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',  # Use SQLite for development
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # For PostgreSQL, MySQL, etc., use relevant configurations here
 }
 
 
